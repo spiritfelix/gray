@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Make the site into black-white-gray style.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function gray_menu() {
+  $items = array();
+  $items['admin/config/gray'] = array(
+    'title' => 'User Black-White-Gray Style',
+    'description' => 'Make the site into black-white-gray style for some unfortunately reasons, wish no one will use this module',
+    'position' => 'right',
+    'weight' => -5,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gray_style_enable_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'gray.admin.inc',
+  );
+  return $items;
+}
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function gray_preprocess_html(&$variables) {
+  // Add css class 'gray' to the html tag.
+  $enabled = variable_get('gray_style_enable', FALSE);
+  if ($enabled) {
+    $variables['classes_array'][] = 'gray';
+  }
+}

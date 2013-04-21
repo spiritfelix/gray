@@ -1,0 +1,5 @@
+name = Gray
+description = Make the site into black-white-gray style for some unfortunately reasons, wish no one will use this module.
+package = Other
+core = 7.x
+stylesheets[all][] = gray.css
