@@ -10,7 +10,7 @@
  */
 function gray_menu() {
   $items = array();
-  $items['admin/config/gray'] = array(
+  $items['admin/config/user-interface/gray'] = array(
     'title' => 'User Black-White-Gray Style',
     'description' => 'Make the site into black-white-gray style for some unfortunately reasons, wish no one will use this module',
     'position' => 'right',

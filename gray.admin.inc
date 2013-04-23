@@ -11,9 +11,9 @@
 function gray_style_enable_settings($form, &$form_state) {
   $form['gray_style_enable'] = array(
     '#type' => 'checkbox',
-    '#title' => 'Enable Black-White-Gray Style',
+    '#title' => t('Enable Black-White-Gray Style'),
     '#default_value' => variable_get('gray_style_enable', FALSE),
-    '#description' => 'Make the site into black-white-gray style for some unfortunately reasons, wish no one will use this module',
+    '#description' => t('Make the site into black-white-gray style for some unfortunately reasons, wish no one will use this module'),
   );
   return system_settings_form($form);
 }
